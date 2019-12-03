@@ -46,7 +46,8 @@ def process_spacecraft(spacecraft_file_abspath):
 
 
 if __name__ == '__main__':
-    INPUT_FILE_ABSPATH = os.path.abspath("second_input.txt")
+    INPUT_FILE_ABSPATH = os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                                      "second_input.txt")
 
     answer = process_spacecraft(INPUT_FILE_ABSPATH)
 
