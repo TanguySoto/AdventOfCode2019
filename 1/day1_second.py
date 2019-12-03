@@ -4,7 +4,7 @@ import math
 """
 https://adventofcode.com/2019
 
-Day 1 - First puzzle
+Day 1 - Second puzzle
 
 @author Tanguy Soto
 @date 03/12/2019 - Darmstadt
@@ -19,7 +19,14 @@ def process_module_mass(module_mass):
     :return int: fuel needed for this module
     """
 
-    return max(0, module_mass // 3 - 2)
+    needed_fuel = 0
+
+    while module_mass > 0:
+        current_needed_fuel = max(0, module_mass // 3 - 2)
+        needed_fuel += current_needed_fuel
+        module_mass = current_needed_fuel
+
+    return needed_fuel
 
 
 def process_spacecraft(spacecraft_file_abspath):
@@ -39,8 +46,8 @@ def process_spacecraft(spacecraft_file_abspath):
 
 
 if __name__ == '__main__':
-    INPUT_FILE_ABSPATH = os.path.abspath("first_input.txt")
+    INPUT_FILE_ABSPATH = os.path.abspath("second_input.txt")
 
     answer = process_spacecraft(INPUT_FILE_ABSPATH)
 
-    print("Day1 - first puzzle answer:\n{}".format(answer))
+    print("Day1 - second puzzle answer:\n{}".format(answer))
