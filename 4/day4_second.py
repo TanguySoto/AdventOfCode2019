@@ -1,6 +1,3 @@
-import os
-import numpy as np
-
 """
 https://adventofcode.com/2019
 
