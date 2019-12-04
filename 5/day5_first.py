@@ -4,7 +4,7 @@ https://adventofcode.com/2019
 Day 5 - First puzzle
 
 @author Tanguy Soto
-@date 03/12/2019 - Darmstadt
+@date 05/12/2019 - Darmstadt
 """
 
 
